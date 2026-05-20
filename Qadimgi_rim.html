@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qadimgi Rim Imperiyasi</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f1ea;
+      color:#222;
+      line-height:1.6;
+    }
+
+    header{
+      background:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1600') center/cover;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:white;
+    }
+
+    header .overlay{
+      background:rgba(0,0,0,0.6);
+      padding:40px;
+      border-radius:15px;
+    }
+
+    header h1{
+      font-size:60px;
+      margin-bottom:20px;
+    }
+
+    nav{
+      background:#8b0000;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:100;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      gap:25px;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    section{
+      padding:70px 10%;
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#8b0000;
+      font-size:36px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .quiz-box{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      margin-top:30px;
+    }
+
+    .question{
+      font-size:24px;
+      margin-bottom:20px;
+    }
+
+    .answers button{
+      width:100%;
+      padding:15px;
+      margin:10px 0;
+      border:none;
+      border-radius:10px;
+      background:#8b0000;
+      color:white;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .answers button:hover{
+      background:#b22222;
+    }
+
+    #result{
+      margin-top:20px;
+      font-size:22px;
+      font-weight:bold;
+      color:green;
+    }
+
+    footer{
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+    }
+
+    .timeline{
+      border-left:5px solid #8b0000;
+      padding-left:20px;
+      margin-top:30px;
+    }
+
+    .timeline-item{
+      margin-bottom:30px;
+    }
+
+    .timeline-item h3{
+      color:#8b0000;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="overlay">
+    <h1>Qadimgi Rim</h1>
+    <p>Tarixdagi eng kuchli imperiyalardan biri haqida qiziqarli sayt</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#about">Rim haqida</a></li>
+    <li><a href="#emperors">Imperatorlar</a></li>
+    <li><a href="#timeline">Tarix</a></li>
+    <li><a href="#quiz">Savol-javob</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <h2>Qadimgi Rim haqida</h2>
+
+  <p>
+    Qadimgi Rim miloddan avvalgi VIII asrda tashkil topgan va keyinchalik
+    ulkan imperiyaga aylangan. Rimliklar arxitektura, harbiy san'at,
+    huquq tizimi va madaniyat bo‘yicha dunyo tarixida katta iz qoldirishgan.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Kolossey</h3>
+      <p>
+        Rimdagi eng mashhur amfiteatr bo‘lib, gladiator janglari shu yerda o‘tkazilgan.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Rim armiyasi</h3>
+      <p>
+        Rim legionlari intizom va kuch bilan mashhur bo‘lgan.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Yo‘llar</h3>
+      <p>
+        “Barcha yo‘llar Rimga olib boradi” degan ibora aynan rimliklardan qolgan.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="emperors">
+  <h2>Mashhur Imperatorlar</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Yuliy Sezar</h3>
+      <p>
+        Rim tarixidagi eng mashhur sarkarda va siyosatchilardan biri.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Avgust</h3>
+      <p>
+        Birinchi Rim imperatori hisoblanadi.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Neron</h3>
+      <p>
+        Shafqatsizligi va Rimdagi katta yong‘in bilan mashhur.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>Rim Tarixi</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <h3>Miloddan avvalgi 753-yil</h3>
+      <p>Rim shahri tashkil topdi.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Miloddan avvalgi 44-yil</h3>
+      <p>Yuliy Sezar o‘ldirildi.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>Milodiy 117-yil</h3>
+      <p>Rim imperiyasi eng katta hududga ega bo‘ldi.</p>
+    </div>
+
+    <div class="timeline-item">
+      <h3>476-yil</h3>
+      <p>G‘arbiy Rim imperiyasi quladi.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>Rim bo‘yicha Quiz</h2>
+
+  <div class="quiz-box">
+    <div class="question" id="question">
+      Savol yuklanmoqda...
+    </div>
+
+    <div class="answers" id="answers">
+    </div>
+
+    <div id="result"></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Qadimgi Rim Sayti | HTML CSS JavaScript</p>
+</footer>
+
+<script>
+
+const quizData = [
+  {
+    question: "Rimning birinchi imperatori kim bo‘lgan?",
+    answers: [
+      "Neron",
+      "Avgust",
+      "Yuliy Sezar",
+      "Trajan"
+    ],
+    correct: "Avgust"
+  },
+
+  {
+    question: "Kolossey nimaga ishlatilgan?",
+    answers: [
+      "Kutubxona",
+      "Bozor",
+      "Gladiator janglari",
+      "Saroy"
+    ],
+    correct: "Gladiator janglari"
+  },
+
+  {
+    question: "Rim imperiyasi qachon qulagan?",
+    answers: [
+      "476-yil",
+      "1453-yil",
+      "753-yil",
+      "44-yil"
+    ],
+    correct: "476-yil"
+  },
+
+  {
+    question: "Yuliy Sezar kim bo‘lgan?",
+    answers: [
+      "Shoir",
+      "Gladiator",
+      "Sarkarda",
+      "Savdogar"
+    ],
+    correct: "Sarkarda"
+  }
+];
+
+let currentQuestion = 0;
+let score = 0;
+
+const questionEl = document.getElementById("question");
+const answersEl = document.getElementById("answers");
+const resultEl = document.getElementById("result");
+
+function loadQuestion(){
+
+  const current = quizData[currentQuestion];
+
+  questionEl.textContent = current.question;
+
+  answersEl.innerHTML = "";
+
+  current.answers.forEach(answer => {
+
+    const btn = document.createElement("button");
+    btn.textContent = answer;
+
+    btn.onclick = () => {
+
+      if(answer === current.correct){
+        score++;
+      }
+
+      currentQuestion++;
+
+      if(currentQuestion < quizData.length){
+        loadQuestion();
+      }else{
+        showResult();
+      }
+
+    };
+
+    answersEl.appendChild(btn);
+
+  });
+
+}
+
+function showResult(){
+
+  questionEl.textContent = "Quiz tugadi!";
+
+  answersEl.innerHTML = "";
+
+  resultEl.innerHTML = `
+    Siz ${quizData.length} ta savoldan 
+    ${score} tasiga to‘g‘ri javob berdingiz.
+  `;
+
+}
+
+loadQuestion();
+
+</script>
+
+</body>
+</html>
